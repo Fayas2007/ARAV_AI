@@ -2,7 +2,6 @@
 main.py – ARAV AI FastAPI application.
 All API endpoints, CORS, rate limiting and startup initialization.
 """
-from __future__ import annotations
 import os
 import uuid
 import random

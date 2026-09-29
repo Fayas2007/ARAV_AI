@@ -2,7 +2,6 @@
 gemini.py – Google Gemini integration for ARAV AI English assistant.
 Uses google-genai async SDK with fast flash-lite models for lightning-fast (<1.5s) responses.
 """
-from __future__ import annotations
 import os
 import asyncio
 import logging

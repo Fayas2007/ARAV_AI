@@ -3,7 +3,6 @@ voice.py – High-speed Speech-to-Text and Text-to-Speech provider integration.
 Supports Gemini native multimodal audio transcription (<1.5s) using GEMINI_API_KEY,
 with fallback to Google Cloud STT/TTS.
 """
-from __future__ import annotations
 import os
 import logging
 from typing import Optional, Tuple

@@ -2,7 +2,6 @@
 knowledge.py – Verified cooperative/government knowledge retrieval for RAG.
 Stores and retrieves verified records from Neon. Falls back to static seed data.
 """
-from __future__ import annotations
 import os
 from typing import List, Optional
 from models import KnowledgeSource, Scheme, Society
