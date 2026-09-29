@@ -12,6 +12,14 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./arav.db")
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
+# If PostgreSQL URL doesn't specify a driver, auto-select psycopg (v3) if installed
+if DATABASE_URL.startswith("postgresql://") and not DATABASE_URL.startswith("postgresql+"):
+    try:
+        import psycopg  # noqa: F401
+        DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg://", 1)
+    except ImportError:
+        pass
+
 is_sqlite = DATABASE_URL.startswith("sqlite")
 engine_kwargs = {}
 if is_sqlite:
