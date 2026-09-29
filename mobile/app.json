@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "ARAV AI",
+    "slug": "arav-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "arav-ai",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B5132"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aravai.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "ARAV AI uses the microphone for voice input in regional languages."
+      }
+    },
+    "android": {
+      "package": "com.aravai.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B5132"
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#16834A"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

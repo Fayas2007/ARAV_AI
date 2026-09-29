@@ -1,0 +1,26 @@
+// constants/Colors.ts
+export const Colors = {
+  primary: '#16834A',
+  primaryDark: '#0B5132',
+  primaryLight: '#D1FAE5',
+  background: '#F6FBF7',
+  white: '#FFFFFF',
+  surface: '#FFFFFF',
+  border: '#E2E8F0',
+  borderLight: '#F1F5F9',
+  text: '#1A202C',
+  textSecondary: '#64748B',
+  textMuted: '#94A3B8',
+  error: '#DC2626',
+  warning: '#D97706',
+  success: '#16834A',
+  info: '#2563EB',
+  shadow: 'rgba(0, 0, 0, 0.08)',
+  overlay: 'rgba(0, 0, 0, 0.5)',
+  // Status colors
+  statusSubmitted: '#2563EB',
+  statusPending: '#D97706',
+  statusApproved: '#16834A',
+  statusRejected: '#DC2626',
+  statusProcessing: '#7C3AED',
+};
