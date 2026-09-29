@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-postgresql://neondb_owner:npg_D0oJUI8cnKqz@ep-misty-lake-b4kzs694-pooler.c-6.us-east-2.aws.neon.tech/neondb?sslmode=require}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_MODEL=gemini-3.5-flash-lite
+      - JWT_SECRET=${JWT_SECRET:-arav_ai_jwt_secret_sih26088_994b7e8d3a1f4c2e}
+      - JWT_ALGORITHM=HS256
+      - JWT_EXPIRE_HOURS=72
+      - STT_PROVIDER=gemini-multimodal
+      - TTS_PROVIDER=none
+    restart: unless-stopped
