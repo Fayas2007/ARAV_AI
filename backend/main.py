@@ -80,8 +80,19 @@ def generate_ref(prefix: str = "ARAV") -> str:
 
 
 # ════════════════════════════════════════════════
-# HEALTH
+# HEALTH & ROOT
 # ════════════════════════════════════════════════
+@app.get("/", tags=["Health"])
+def root():
+    return {
+        "status": "ok",
+        "service": "ARAV AI API",
+        "version": "1.0.0",
+        "health": "/health",
+        "docs": "/docs",
+    }
+
+
 @app.get("/health", tags=["Health"])
 def health_check(db: Session = Depends(get_db)):
     """Returns service status and Gemini model info."""
