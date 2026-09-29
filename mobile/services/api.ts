@@ -2,7 +2,7 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
 import * as SecureStore from 'expo-secure-store';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://172.16.72.203:8000';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://arav-ai-backend.onrender.com';
 const TOKEN_KEY = 'arav_auth_token';
 
 export const apiClient: AxiosInstance = axios.create({
