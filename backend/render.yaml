@@ -1,15 +1,16 @@
 services:
   - type: web
     name: arav-ai-backend
-    env: docker
+    env: python
     region: oregon
     plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /
     envVars:
       - key: DATABASE_URL
         value: postgresql://neondb_owner:npg_D0oJUI8cnKqz@ep-misty-lake-b4kzs694-pooler.c-6.us-east-2.aws.neon.tech/neondb?sslmode=require
-      - key: GEMINI_API_KEY
-        sync: false
       - key: GEMINI_MODEL
         value: gemini-2.5-flash
       - key: JWT_SECRET
