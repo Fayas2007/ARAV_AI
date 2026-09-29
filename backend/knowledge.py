@@ -4,6 +4,7 @@ Stores and retrieves verified records from Neon. Falls back to static seed data.
 """
 import os
 from typing import List, Optional
+from sqlalchemy.orm import Session
 from models import KnowledgeSource, Scheme, Society
 
 SEED_SCHEMES = [
